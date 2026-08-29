@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header h1{
+    color: white;
+    background-color: rgb(58, 56, 56);
+    padding: 1rem;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: black;
+    padding: 1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 15rem;
+
+}
+
+main p{
+    background-color: grey;
+    padding: 1rem;
+}
+main aside{
+    padding: 1rem;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: rgb(58, 56, 56);
+    height: 8rem;
+    padding: 1rem;
+}
+
+
+
