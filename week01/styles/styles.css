@@ -17,6 +17,7 @@ nav ul{
 }
 nav ul li a{
     text-decoration: none;
+    display: grid;
     color: white;
 }
 main{
