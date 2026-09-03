@@ -3,15 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+header, main, footer{
 
-header h1,section h2, footer{
+  font-family: "Roboto", sans-serif;
+}
+
+#course-title,section h2, footer{
     color: white;
     background-color: rgb(7, 7, 121);
     padding: .5rem;
     text-align: center;
+} 
+#course-title{
+    display:block;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+section h2{
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
-} 
+}
 nav ul{
     display: flex;
     justify-content: space-around;
