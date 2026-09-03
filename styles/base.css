@@ -80,14 +80,14 @@ main{
     align-items: flex-start;
     gap: 1rem;
 }
-.card-1 h3{
+.card h3{
     text-align: center;
     display: inline;
     padding-left: 50px;
     padding-right: 50px;
     border-bottom: 1px solid rgb(56, 55, 55);
 }
-.card-1 aside{
+.card aside{
     text-align: center;
     margin: 1rem;
 }
