@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 header, main, footer{
-
   font-family: "Roboto", sans-serif;
 }
 
@@ -89,4 +88,7 @@ main{
 .card aside{
     text-align: center;
     margin: 1rem;
+}
+header{
+    background-color: transparent;
 }
