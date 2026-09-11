@@ -1,32 +1,23 @@
-@media screen and (min-width: 500px){
-        
+@media screen and (min-width: 512px) {
     .navigation{
-        display: flex;
-        justify-content: flex-end;
-        gap: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    background-color: none;
     }
-    .navigation a{
-    color: white;
-    text-decoration: none;
-    }
-    .navigation a:hover{
-        color: bisque;
-        padding: 0.5rem;
-        border: 1px solid white;
-        border-radius: 10px;
-        background-color: purple;
-    }
-    #menu{
-        display: none;
-    }
-
     main{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
     }
     main h1{
         grid-column: 1/4;
     }
-
-
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #menu{
+        display: none;
+    }
 }

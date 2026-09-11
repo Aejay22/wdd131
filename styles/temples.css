@@ -1,40 +1,39 @@
 *{
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header, main, footer{
   font-family: "Roboto", sans-serif;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+li{
+    list-style: none;
 }
-header, footer{
-    background-color: rgb(45, 2, 97);
+a{
+    text-decoration: none;
     color: white;
-    padding: 10px 30px;
-}
-footer{
-    text-align: center;
 }
 
-main{
-    max-width: 800px;
-    text-align: center;
+header, footer{
+    background-color: rgb(48, 9, 206);
+    color: white;
     padding: 1rem;
-    margin: 0 auto;
+    margin: 1rem;
+    text-align: center;
+}
+main{
+    text-align: center;
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 80%;
 }
-figure{
-    margin: 0;
-}
-main figure img{
+
+img{
     width: 100%;
     height: auto;
-    margin: 0;
 }
 #menu {
 	display: block;
@@ -42,29 +41,32 @@ main figure img{
 	font-weight: 700;
 	text-decoration: none;
 	padding: 0.5rem 0.75rem;
-	color: #fff;
-}
-#menu:active{
-    border: white;
+	color: white;
 }
 
 #menu::before {
 	content: "≡";
 }
 #menu.show::before{
-    content: "❌";
+    content: "X";
 }
-
-nav.navigation {
+.apple{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation{
     display: none;
 }
-
-nav.navigation.show{
-    display: flex;
-    flex-direction: column;
-
+.navigation.show{
+    display: block;
+    background-color: brown;
 }
-.navigation a{
-    color: white;
-    text-decoration: none;
+a:hover{
+    background-color: rgb(48, 9, 206);
+    border: 1px solid white;
+    padding: .34rem;
+    display: block;
 }
+
+
