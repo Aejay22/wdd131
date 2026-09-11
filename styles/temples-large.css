@@ -1,0 +1,32 @@
+@media screen and (min-width: 500px){
+        
+    .navigation{
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+    .navigation a{
+    color: white;
+    text-decoration: none;
+    }
+    .navigation a:hover{
+        color: bisque;
+        padding: 0.5rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: purple;
+    }
+    #menu{
+        display: none;
+    }
+
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    main h1{
+        grid-column: 1/4;
+    }
+
+
+}
