@@ -60,10 +60,10 @@ img{
 }
 .navigation.show{
     display: block;
-    background-color: brown;
+    background-color:rgb(48, 9, 206) ;
 }
 a:hover{
-    background-color: rgb(48, 9, 206);
+    background-color: blue;
     border: 1px solid white;
     padding: .34rem;
     display: block;
