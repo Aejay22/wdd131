@@ -58,7 +58,7 @@ img{
 .navigation{
     display: none;
 }
-.navigation.show{
+nav.show{
     display: block;
     background-color:rgb(48, 9, 206) ;
 }
