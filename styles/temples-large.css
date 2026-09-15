@@ -1,5 +1,5 @@
 @media screen and (min-width: 512px) {
-    nav{
+    .navigation{
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
