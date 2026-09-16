@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <meta name="author" content="Joshua Uyinosagbon Anthony">
+    <meta name="description" content="Place Exercise | WDD131">
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="./scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 500px)" srcset="./images/hero-large.webp">
+            <img src="./images/hero-small.webp" alt="super eagles" width="500" height="250">
+        </picture>
+        
+        <div class="datatable">
+            <h2>Data</h2>
+            <div class="row">
+                <div class="col">Area:</div>
+                <div class="col">923,769 sq km</div>
+            </div>
+            <div class="row">
+                <div class="col">Population:</div>
+                <div class="col">243,275,880</div>
+            </div>
+            <div class="row">
+                <div class="col">Capital:</div>
+                <div class="col">Abuja</div>
+            </div>
+            <div class="row">
+                <div class="col">Languages:</div>
+                <div class="col">English, Pidgin</div>
+            </div>
+            <div class="row">
+                <div class="col">Currency:</div>
+                <div class="col">Naira, Kobo</div>
+            </div>
+            <div class="row">
+                <div class="col">Time Zone:</div>
+                <div class="col">UTC+1</div>
+            </div>
+            <div class="row">
+                <div class="col">Calling Code:</div>
+                <div class="col">+234</div>
+            </div>
+            <div class="row">
+                <div class="col">Internet TLD:</div>
+                <div class="col">.ng</div>
+            </div>
+        </div>
+        <div class="weather-header">
+            <h2>Weather</h2>
+            <img class="emoticon" src="./images/weather-icon.svg" alt="Weather">
+        </div>
+        <div class="row">
+            <div class="col">Temperature:</div>
+            <div class="col"><span class="temp">9.8</span>°C</div>
+        </div>
+        <div class="row">
+            <div class="col">Conditions:</div>
+            <div class="col">Partly Coludy</div>
+        </div>
+        <div class="row">
+            <div class="col">Wind:</div>
+            <div class="col"><span class="speed">5</span> km/h</div>
+        </div>
+        <div class="row">
+            <div class="col">Wind Chill:</div>
+            <div class="col"><span class="windChil"></span> °C</div>
+        </div>
+
+    </main>
+    <footer>        
+        <p>&copy;<span id="currentyear"></span> ❤️ Joshua Uyinosagbon Anthony ❤️ Nigeria</p> 
+        <p><span id="lastModified"></span></p>
+    </footer>    
+</body>
+</html>
