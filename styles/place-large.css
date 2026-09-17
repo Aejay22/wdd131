@@ -1,0 +1,52 @@
+@media screen and  (min-width: 1000px){
+    *{
+        font-size: 1.5rem;
+    }
+    .emoticon{
+        display: none;
+    }
+    .not-emoticon{
+        display: block;
+        font-size: 30px;
+    }
+    .weather-header, h2{
+        background-color: green;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+        position: relative;
+        right: 30px;
+    }
+    .datatable h2{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .weather-header{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .datatable, .weather-table{
+        opacity: .8;
+        background-color: white;
+        color: rgba(22, 19, 18, 0.532);
+        position: absolute;
+    }
+    main{
+        position: relative;
+    }
+    .weather-table{
+        padding: 1rem;
+        top: 450px;
+        right: 50px;
+    }
+    .datatable{
+        top: 1rem;
+        left: 1rem;
+    }
+
+
+}

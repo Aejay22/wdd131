@@ -36,7 +36,6 @@ picture img{
 .col{
     flex: 1;
     padding: 0 .3rem;
-    font-size: 16px;
     
 }
 .col:first-child{
@@ -56,4 +55,7 @@ picture img{
 h2{
     text-align: center;
     margin: 10px;
+}
+.not-emoticon{
+    display: none;
 }
