@@ -11,7 +11,7 @@ var lastModifiedDate = document.lastModified;
 modifiedSpan.textContent = "Last Modification: " + lastModifiedDate;
 
 
-let windChill = document.querySelector(".windChill");
+let windChill = document.querySelector(".windChil");
 let speed = document.querySelector(".speed");
 let temp = document.querySelector(".temp");
 let tempValue = parseFloat(temp.textContent);
