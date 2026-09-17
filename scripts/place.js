@@ -21,4 +21,4 @@ function getWindChill(temp, speed){
     let windChill = 13.12 + (0.6215 * temp) - (11.37 *(speed ** 0.16)) + (0.3965 * temp * (speed ** 0.16));
     return windChill;
 }
-windChill.textContent = getWindChill(tempValue, speedValue);
+windChill.textContent = getWindChill(tempValue, speedValue).toFixed(1);
