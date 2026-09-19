@@ -31,7 +31,7 @@ picture img{
 .row{
     display: flex;
     justify-content: space-between;
-    padding: 8px auto;
+    padding: 8px;
 }
 .col{
     flex: 1;
@@ -58,4 +58,7 @@ h2{
 }
 .not-emoticon{
     display: none;
+}
+.col:first-child::after{
+    content: ":";
 }
