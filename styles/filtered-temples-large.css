@@ -20,4 +20,12 @@
     #menu{
         display: none;
     }
+    img{
+        box-shadow: 6px 6px 6px rgba(0,0, 0, 0.2);
+    }
+    figure{
+        border: 1px solid black;
+        padding: 1rem;
+        background-color: rgb(239, 231, 231);
+    }
 }

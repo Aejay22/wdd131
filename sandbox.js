@@ -1,12 +1,28 @@
-const revealBtn = document.querySelector(".reveal-btn");
-const hiddenContent = document.querySelector(".hidden-content");
+let aCourse = {
 
-function play(){
-    if (hiddenContent.classList.contains("reveal-btn")){
-        hiddenContent.classList.remove("reveal-btn");
-    }else{
-        hiddenContent.classList.add("reveal-btn");
-    }
+};
+aCourse.code = "WDD131";
+aCourse.title = "Dynamic Web Fundamentals";
+aCourse.credits = 2;
+aCourse.sections = [];
+aCourse.sections.push({section: "001", enrolled:95, instructor: "Ahmed Lawal Anthony"},{section: "002", enrolled:97, instructor: "Taiye Obi Osas"});
+
+
+function setCourseInformation(aCourse){
+  document.querySelector(".openAi").innerText =  `${aCourse.code}-${aCourse.title}`;
 }
+setCourseInformation(aCourse);
 
-revealBtn.addEventListener("click", play);
+function renderSections(course){
+  const tbody = document.querySelector("tbody");
+  let rows = "";
+  for (const section of course.sections){
+    rows+=`<tr>
+      <td>${section.section}</td>
+      <td>${section.enrolled}</td>
+      <td>${section.instructor}</td>
+    </tr>`
+  }
+  tbody.innerHTML = rows;
+}
+renderSections(aCourse)
