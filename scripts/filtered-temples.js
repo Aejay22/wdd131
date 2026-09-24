@@ -2,7 +2,6 @@ let menu = document.querySelector("#menu");
 let nav = document.querySelector(".navigation");
 
 
-
 let main = document.querySelector("main");
 let old = document.querySelector("#old");
 let New = document.querySelector("#new");
@@ -150,5 +149,18 @@ small.addEventListener("click", ()=>createTemple(filteredSmall));
 large.addEventListener("click", ()=>createTemple(filteredLarge));
 home.addEventListener("click", ()=>createTemple(temples));
 console.log(filteredOld);
+
+
+var yearSpan = document.getElementById("currentyear");
+var modifiedSpan = document.getElementById("lastModified");
+
+var today = new Date();
+var currentYear = today.getFullYear();
+
+yearSpan.textContent = currentYear;
+
+var lastModifiedDate = document.lastModified;
+
+modifiedSpan.textContent = "Last Modification: " + lastModifiedDate;
 
 
