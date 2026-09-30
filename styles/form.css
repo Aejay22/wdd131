@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+header, footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: #38045bce;
+    margin-bottom: 1rem;
+    color: white;
+}
+form{
+    background-color: rgba(208, 165, 208, 0.2);
+}
+
+form label, em, input[type="submit"]{
+    display: block;
+    margin-top: 1rem;
+}
+
+.stars > label{
+    margin: 0;
+}
+
+.checkbox > label,em{
+    margin: 0;
+}
+.stars{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.stars > label:hover {
+	color: black;
+}
+
+.stars > label::before {
+	content: "☆";
+}
+
+.stars input:checked ~ label::before {
+	content: "★";
+}
+.stars input{
+    display: none;
+
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select,
+input[type="submit"]{
+    max-width: 400px;
+    width: 96%;
+    padding: .4rem;
+}
+
+form{
+    padding: 1rem;
+}
+
+hr{
+    margin-top: 1rem;
+}
+
+
