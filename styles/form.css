@@ -44,9 +44,9 @@ form label, em, input[type="submit"]{
 .stars input:checked ~ label::before {
 	content: "★";
 }
+
 .stars input{
     display: none;
-
 }
 
 input[type="text"],
@@ -67,4 +67,18 @@ hr{
     margin-top: 1rem;
 }
 
+input:required:valid, select:required:valid{
+    border-left: 10px solid green;
+}
 
+input:required, select:required{
+    border-left: 10px solid red;
+}
+
+.stars:has(input:required){
+    color: red;
+}
+
+.stars:has(input:required:valid){
+    color: green;
+}
