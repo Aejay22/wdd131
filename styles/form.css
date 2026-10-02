@@ -36,10 +36,12 @@ em{
 
 .stars > label::before {
 	content: "☆";
+    margin: 1rem;
 }
 
 .stars input:checked ~ label::before {
 	content: "★";
+    margin: 1rem;
 }
 
 .stars input{
