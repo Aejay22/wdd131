@@ -92,3 +92,8 @@ body{
     display: inline;
     margin-left: 2px;
 }
+@media screen and (min-width: 399px) {
+    header, footer{
+        background-color: blueviolet;
+    }
+}
