@@ -21,7 +21,7 @@ form label, em, input[type="submit"]{
     margin: 0;
 }
 
-.checkbox > label,em{
+em{
     margin: 0;
 }
 .stars{
@@ -83,4 +83,8 @@ input:required, select:required{
 body{
     max-width: 400px;
     margin: 0 auto;
+}
+.checkbox label{
+    display: inline;
+    margin-left: 2px;
 }
