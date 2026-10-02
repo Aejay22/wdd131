@@ -11,9 +11,6 @@ header, footer{
     margin-bottom: 1rem;
     color: white;
 }
-form{
-    background-color: rgba(208, 165, 208, 0.2);
-}
 
 form label, em, input[type="submit"]{
     display: block;
@@ -60,6 +57,7 @@ input[type="submit"]{
 }
 
 form{
+    background-color: rgba(208, 165, 208, 0.2);
     padding: 1rem;
 }
 
@@ -81,4 +79,8 @@ input:required, select:required{
 
 .stars:has(input:required:valid){
     color: green;
+}
+body{
+    max-width: 400px;
+    margin: 0 auto;
 }
