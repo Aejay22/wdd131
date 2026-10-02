@@ -31,17 +31,19 @@ em{
 }
 
 .stars > label:hover {
-	color: black;
+	color: lime;
 }
 
 .stars > label::before {
 	content: "☆";
     margin: 1rem;
+    font-size: large;
 }
 
 .stars input:checked ~ label::before {
 	content: "★";
     margin: 1rem;
+    font-size: large;
 }
 
 .stars input{
