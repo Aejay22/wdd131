@@ -36,6 +36,7 @@ table{
     border-collapse: collapse;
     margin: 0 auto;
     width: 100%;
+    max-width: 100%;
 }
 .menu{
     display: flex;
@@ -95,4 +96,7 @@ ul, ol{
 }
 h1, h2, p, ol, ul, .content>strong, h3{
     margin: .7rem;
+}
+img{
+    max-width: 100%;
 }
