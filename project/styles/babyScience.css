@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0.2rem;
+    padding: 0;   
+}
+header, footer{
+    background-color: green;
+    color: rgb(235, 240, 250);
+}
+header img{
+    width: 100px;
+    height: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+    margin-top: 1rem;
+    padding: .75rem;
+    text-align: center;
+}
+main{
+    background-color: rgb(229, 242, 249);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+td, th{
+   border: solid 1px rgb(137, 132, 132); 
+   padding: 1rem;
+}
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+.menu{
+    display: flex;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+.menu a{
+    border: 1px solid rgb(87, 83, 83);
+    color: white;
+    margin: 4px;
+    padding: .3rem;
+    background-color: green;
+    text-decoration: none;
+}
+
+ul, ol{
+    padding-left: 1.5rem;
+}
+.branchesOfScience img{
+    float: right;
+    margin: 1rem;
+}
+.fig{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 1rem;
+    background-color: rgb(53, 91, 91);
+    color: white;
+    padding: 1rem;
+}
+.fig img{
+    width: 230px;
+    height: 200px;
+}
+.scientificMethods {
+    float: right;
+    width: 500px;
+}
+.quiz{
+    display: inline-block;
+    background-color: purple;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0;
+}
+.quizDiv{
+    text-align: center;
+}
+.menstrual, .manstrualProducts, .howToWashHands, .compost{
+    float: right;
+    width: 250px;
+}
+h1, h2, p, ol, ul, .content>strong, h3{
+    margin: .7rem;
+}
