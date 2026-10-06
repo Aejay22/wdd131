@@ -3,6 +3,13 @@
     margin: 0.2rem;
     padding: 0;   
 }
+header, main, footer{
+    font-family: "Roboto", sans-serif;  
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+
+}
 header, footer{
     background-color: green;
     color: rgb(235, 240, 250);
@@ -25,7 +32,7 @@ footer{
 main{
     background-color: rgb(229, 242, 249);
     margin: 0 auto;
-    padding: 1rem;
+    width: 100%;
 }
 
 td, th{
@@ -59,8 +66,23 @@ ul, ol{
     float: right;
     margin: 1rem;
 }
+.fig img{
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    width: 230px;
+    height: 230px;
+}
+.fig figcaption{
+    text-align: center;
+    justify-self: center;
+    max-width: 350px;
+    
+}
 .fig{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
@@ -69,10 +91,7 @@ ul, ol{
     color: white;
     padding: 1rem;
 }
-.fig img{
-    width: 230px;
-    height: 200px;
-}
+
 .scientificMethods {
     float: right;
     width: 500px;
