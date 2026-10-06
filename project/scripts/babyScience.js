@@ -1,5 +1,5 @@
 let contentTable = document.querySelector(".contentTable");
-
+let links = document.querySelectorAll("a");
 const tableOfContent = [
 
     {
@@ -67,7 +67,8 @@ const tableOfContent = [
         quiz: ["Quiz", "./week6/quiz.html"]
     },
     {
-        topic: ["MID TERM TEST/ MID TERM BREAK", "./week7/test.html"]
+        topic: ["MID TERM TEST/ MID TERM BREAK", "./week7/week7.html"],
+        quiz: ["Test", "./week7/test.html"]
     },
     {
         topic: ["Reproductive System", "./week8/week8.html"],
@@ -153,4 +154,11 @@ if (contentTable !== null){
     }
 }
 
-
+links.forEach(
+    link=>{
+        if(link.href === window.location.href){
+            link.style.backgroundColor = "rgb(166, 220, 200)";
+            link.style.color = "black";
+        }
+    }
+)
