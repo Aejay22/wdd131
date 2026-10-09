@@ -5895,67 +5895,246 @@ let populateQuiz = (quiz, quizContent)=>{
 
 
 
-let getInputValue = (week, classname)=>{
-    let formData = new FormData(form)
+// let getInputValue = (week, classname)=>{
+//     let formData = new FormData(form)
+//     let correct = 0;
+//     for(let i = 0; i < week.length; i++){
+//         if (formData.get(week[i].question) === week[i].answer){
+//             correct++;
+//         }
+//     }
+//     populateLocalStorage(correct, classname);
+
+// }
+
+// let populateLocalStorage = (correct, classname)=>{
+//     let attempt = {};
+//     let individualProgress = JSON.parse(localStorage.getItem(classname));
+//     if (individualProgress == null){
+//         individualProgress = [];
+//         attempt["NO of Attempt"] = "Score/50";
+//         individualProgress.push(attempt);
+//     }
+//     let key = `Attempt ${individualProgress.length + 1}`;
+//     attempt[key] = correct;
+//     individualProgress.push(attempt);
+//     localStorage.setItem(classname, JSON.stringify(individualProgress));
+
+// }
+
+
+// let populateIndividualProgress = (weekX)=>{
+    
+//     let storedData = JSON.parse(localStorage.getItem(weekX));
+//     let div = document.querySelector("div");
+
+//     if (storedData !== null){
+
+    
+//         if (div !== null && div.classList.contains(`progress${weekX}`)){
+//             div.innerHTML = "";
+//             let table = document.createElement("table");
+//             let thead = document.createElement("thead");
+//             let tbody = document.createElement("tbody");
+
+//                 for (let i = 0; i < storedData.length; i++){
+//                 let object = storedData[i];
+//                 let keyName = Object.keys(object)[0];
+//                 let score = object[keyName];
+//                 let tr = document.createElement("tr");
+//                 let th1 = document.createElement("th");
+//                 let th2 = document.createElement("th");
+//                 th1.textContent = keyName;
+//                 th2.textContent = score;
+//                 tr.appendChild(th1);
+//                 tr.appendChild(th2);    
+//                 if (i == 0){
+//                     thead.appendChild(tr);
+//                 }
+//                 tbody.appendChild(tr)
+//                 }
+//             table.appendChild(thead);
+//             table.appendChild(tbody);
+//             div.appendChild(table)
+//             if (div.classList.contains("empty")){
+//                 div.classList.remove("empty");
+//             }
+//         }
+//     }else{
+//         div.classList.add("empty");
+//         div.textContent = "Partake of the quiz to see your score."
+//     }
+// }
+
+
+
+// if (week !== null){
+//     let week1 = document.querySelector("#week1");
+//     if (week1 !== null){
+//         let submitBtn = document.querySelector("input[type='submit']");
+//         populateQuiz(week1, week1Quiz);
+//         if (submitBtn !== null){
+//         submitBtn.addEventListener("click", () =>{
+//             getInputValue(week1Quiz, week1.id)
+//             populateIndividualProgress(week1);
+//         });}
+//     };
+//     let week2 = document.querySelector("#week2");
+//     if (week2 !== null){
+//         populateQuiz(week2, week2Quiz)
+//     };
+//     let week3 = document.querySelector("#week3");
+//         if (week3 !== null){
+//             populateQuiz(week3, week3Quiz)
+//         };
+//     let week4 = document.querySelector("#week4");
+//         if (week4 !== null){
+//             populateQuiz(week4, week4Quiz)
+//         };
+//     let week5 = document.querySelector("#week5");
+//         if (week5 !== null){
+//             populateQuiz(week5, week5Quiz)
+//         };
+//     let week6 = document.querySelector("#week6");
+//         if (week6 !== null){
+//             populateQuiz(week6, week6Quiz)
+//         };
+//     let week7 = document.querySelector("#week7");
+//         if (week7 !== null){
+//             populateQuiz(week7, week7Quiz)
+//         };
+//     let week8 = document.querySelector("#week8");
+//         if (week8 !== null){
+//             populateQuiz(week8, week8Quiz)
+//         };
+//     let week9 = document.querySelector("#week9");
+//         if (week9 !== null){
+//             populateQuiz(week9, week9Quiz)
+//         };
+//     let week10 = document.querySelector("#week10");
+//         if (week10 !== null){
+//             populateQuiz(week10, week10Quiz)
+//         };
+//     let week11 = document.querySelector("#week11");
+//         if (week11 !== null){
+//             populateQuiz(week11, week11Quiz)
+//         };
+
+
+// };
+
+let getInputValue = (quizContent, quizId)=>{
+    let formData = new FormData(form);
     let correct = 0;
-    for(let i = 0; i < week.length; i++){
-        if (formData.get(week[i].question) === week[i].answer){
-            correct++;
+
+    for (let i = 0; i < quizContent.length; i++){
+        if (formData.get(quizContent[i].question) === quizContent[i].answer){
+            correct = correct + 1;
         }
     }
-    localStorage.setItem(classname, JSON.stringify(correct));
 
-
+    populateLocalStorage(correct, quizContent.length, quizId);
 }
 
+let populateLocalStorage = (correct, total, quizId)=>{
+    let individualProgress = JSON.parse(localStorage.getItem(quizId));
+
+    if (individualProgress == null){
+        individualProgress = [];
+    }
+
+    let attemptNumber = individualProgress.length + 1;
+
+    let attempt = {
+        attempt: attemptNumber,
+        score: correct,
+        total: total
+    };
+
+    individualProgress.push(attempt);
+    localStorage.setItem(quizId, JSON.stringify(individualProgress));
+}
+
+let populateIndividualProgress = (quizId)=>{
+    let div = document.querySelector(`.progress${quizId}`);
+
+    if (div === null){
+        return;
+    }
+
+    let storedData = JSON.parse(localStorage.getItem(quizId));
+
+    if (storedData === null){
+        div.classList.add("empty");
+        div.textContent = "Partake of the quiz to see your score.";
+        return;
+    }
+
+    div.innerHTML = "";
+    div.classList.remove("empty");
+
+    let table = document.createElement("table");
+    let thead = document.createElement("thead");
+    let tbody = document.createElement("tbody");
+
+    let headRow = document.createElement("tr");
+    let headAttempt = document.createElement("th");
+    let headScore = document.createElement("th");
+    headAttempt.textContent = "Attempt";
+    headScore.textContent = "Score";
+    headRow.appendChild(headAttempt);
+    headRow.appendChild(headScore);
+    thead.appendChild(headRow);
+
+    for (let i = 0; i < storedData.length; i++){
+        let tr = document.createElement("tr");
+        let tdAttempt = document.createElement("td");
+        let tdScore = document.createElement("td");
+
+        tdAttempt.textContent = `Attempt ${storedData[i].attempt}`;
+        tdScore.textContent = `${storedData[i].score}/${storedData[i].total}`;
+
+        tr.appendChild(tdAttempt);
+        tr.appendChild(tdScore);
+        tbody.appendChild(tr);
+    }
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    div.appendChild(table);
+}
+
+let setupQuiz = (quizId, quizContent)=>{
+    let quiz = document.querySelector(`#${quizId}`);
+
+    if (quiz !== null){
+        populateQuiz(quiz, quizContent);
+
+        form.addEventListener("submit", ()=>{
+            getInputValue(quizContent, quizId);
+        });
+    }
+}
+
+// Quiz pages
 if (week !== null){
-    let week1 = document.querySelector("#week1");
-    if (week1 !== null){
-        let button = document.querySelector("input[type='submit']");
-        populateQuiz(week1, week1Quiz);
-        submitButton.addEventListener("click", () =>{getInputValue(week1Quiz, week1.id)});
-    };
-    let week2 = document.querySelector("#week2");
-    if (week2 !== null){
-        populateQuiz(week2, week2Quiz)
-    };
-    let week3 = document.querySelector("#week3");
-        if (week3 !== null){
-            populateQuiz(week3, week3Quiz)
-        };
-    let week4 = document.querySelector("#week4");
-        if (week4 !== null){
-            populateQuiz(week4, week4Quiz)
-        };
-    let week5 = document.querySelector("#week5");
-        if (week5 !== null){
-            populateQuiz(week5, week5Quiz)
-        };
-    let week6 = document.querySelector("#week6");
-        if (week6 !== null){
-            populateQuiz(week6, week6Quiz)
-        };
-    let week7 = document.querySelector("#week7");
-        if (week7 !== null){
-            populateQuiz(week7, week7Quiz)
-        };
-    let week8 = document.querySelector("#week8");
-        if (week8 !== null){
-            populateQuiz(week8, week8Quiz)
-        };
-    let week9 = document.querySelector("#week9");
-        if (week9 !== null){
-            populateQuiz(week9, week9Quiz)
-        };
-    let week10 = document.querySelector("#week10");
-        if (week10 !== null){
-            populateQuiz(week10, week10Quiz)
-        };
-    let week11 = document.querySelector("#week11");
-        if (week11 !== null){
-            populateQuiz(week11, week11Quiz)
-        };
+    setupQuiz("week1", week1Quiz);
+    setupQuiz("week2", week2Quiz);
+    setupQuiz("week3", week3Quiz);
+    setupQuiz("week4", week4Quiz);
+    setupQuiz("week5", week5Quiz);
+    setupQuiz("week6", week6Quiz);
+    setupQuiz("week7", week7Quiz);
+    setupQuiz("week8", week8Quiz);
+    setupQuiz("week9", week9Quiz);
+    setupQuiz("week10", week10Quiz);
+    setupQuiz("week11", week11Quiz);
+}
 
+// Progress page
+let allQuizIds = ["week1", "week2", "week3", "week4", "week5", "week6", "week7", "week8", "week9", "week10", "week11"];
 
-};
+for (let i = 0; i < allQuizIds.length; i++){
+    populateIndividualProgress(allQuizIds[i]);
+}
 

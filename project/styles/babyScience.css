@@ -144,3 +144,34 @@ legend{
     right: 188rem;
     margin-left: 1rem;
 }
+.added{
+    border-right: 1px solid rgb(27, 5, 5);
+    border-left: 1px solid rgb(27, 6, 6);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.added img{
+    width: 25px;
+    margin: 0 50px 0;
+
+}
+input[type="submit"]{
+    padding: .5rem 3rem;
+    background-color: aquamarine;
+    margin-left: 11rem;
+}
+@media (max-width: 612px) {
+    .added{
+    border-right: 1px solid rgb(27, 5, 5);
+    border-left: 1px solid rgb(27, 6, 6);
+    display: flex;
+    flex-direction: column;
+    
+    }
+    .added img{
+        margin: 0 10px 0;
+    }
+
+    
+}
