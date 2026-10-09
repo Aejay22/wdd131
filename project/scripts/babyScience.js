@@ -6012,6 +6012,10 @@ for (let i = 0; i < allQuizIds.length; i++){
 
 let footer = document.querySelector("footer");
 if (footer !== null){
+    let div = document.createElement("div");
+    let strong = document.createElement("strong");
+    strong.textContent = "List of External Sources used to complete this project"
+    div.appendChild(strong);
     let ol = document.createElement("ol");
     let listOfReference = ["ChatGpt", "MicrosoftAI", "ClaudeCode", "Google", "freesvg.org", "KofaPage", "Pintrest"]
     listOfReference.forEach(reference =>{
@@ -6019,5 +6023,6 @@ if (footer !== null){
         li.textContent = reference;
         ol.appendChild(li);
     });
-    footer.prepend(ol)
+    div.appendChild(ol);
+    footer.prepend(div);
 }
