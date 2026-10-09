@@ -6010,3 +6010,14 @@ for (let i = 0; i < allQuizIds.length; i++){
     populateIndividualProgress(allQuizIds[i]);
 }
 
+let footer = document.querySelector("footer");
+if (footer !== null){
+    let ol = document.createElement("ol");
+    let listOfReference = ["ChatGpt", "MicrosoftAI", "ClaudeCode", "Google", "freesvg.org", "KofaPage", "Pintrest"]
+    listOfReference.forEach(reference =>{
+        let li = document.createElement("li");
+        li.textContent = reference;
+        ol.appendChild(li);
+    });
+    footer.prepend(ol)
+}
