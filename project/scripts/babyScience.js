@@ -93,11 +93,11 @@ const tableOfContent = [
     },
     {
         topic:["Revision", "./week10/week10.html"],
-        quiz: ["Quiz", "./week10/revision.html"]
+        quiz: ["REVISION", "./week10/revision.html"]
     },
     {
         topic: ["Examination", "./week11/week11.html"],
-        quiz: ["Quiz", "./week11/exam.html"]
+        quiz: ["EXAM", "./week11/exam.html"]
     }
 ]
 
