@@ -5,8 +5,8 @@
 }
 
 header, footer{
-    background-color: #012D01;
-    color: white;
+    background-color: green;
+    color: rgb(235, 240, 250);
 }
 header img{
     width: 100px;
@@ -24,7 +24,7 @@ footer{
     text-align: center;
 }
 main{
-    background-color: white;
+    background-color: rgb(229, 242, 249);
     margin: 0 auto;
     width: 100%;
 }
