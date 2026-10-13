@@ -5,8 +5,8 @@
 }
 
 header, footer{
-    background-color: green;
-    color: rgb(235, 240, 250);
+    background-color: #012D01;
+    color: white;
 }
 header img{
     width: 100px;
